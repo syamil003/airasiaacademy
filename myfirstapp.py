@@ -10,3 +10,4 @@ if show:
     'Students': ['John', 'Lofa', 'Siti', 'Amy'],
     'Attendance Status': ['yes', 'yes', 'yes', 'no']
     }))
+
