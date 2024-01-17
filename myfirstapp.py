@@ -25,3 +25,4 @@ elif option=='T n C':
         'Attendance Status': ['yes', 'yes', 'yes', 'no']
         }))
 
+
