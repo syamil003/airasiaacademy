@@ -26,3 +26,8 @@ st.write(df)
 modelSvr = pickle.load(open("Advertising.h5", "rb"))
 
 prediction = loaded_model.predict(df)
+st.subheader('Class labels and their corresponding index number')
+st.write(Y.unique())
+
+st.subheader('Prediction')
+st.write(prediction)
