@@ -36,6 +36,5 @@ elif option=='Long Process':
         time.sleep(0.1)
 
     '...and now we\'re done!'
-            
-            }))
+    }))
         
