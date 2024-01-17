@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import seaborn as sns
-from sklearn.naive_bayes import SVR
+from sklearn.svr import SVR
 
 st.write("# Advertising Prediction App")
 st.write("This app predicts the **TV, Radio and Newspaper** type!")
