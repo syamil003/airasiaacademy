@@ -1,7 +1,8 @@
+
 import streamlit as st
 import pandas as pd
 import seaborn as sns
-from sklearn.svr import SVR
+import pickle
 
 st.write("# Advertising Prediction App")
 st.write("This app predicts the **TV, Radio and Newspaper** type!")
@@ -23,21 +24,9 @@ df = user_input_features()
 st.subheader('User Input parameters')
 st.write(df)
 
-data = sns.load_dataset('Advertising')
-X = data.drop(['Sales'],axis=1)
-Y = data.species.copy()
-
-modelSvr = SVR()
-modelSvr.fit(X, Y)
+modelSvr = pickle.load(open("Advertising.h5", "rb"))
 
 prediction = modelSvr.predict(df)
-prediction_proba = modelSvr.predict_proba(df)
-
-st.subheader('Class labels and their corresponding index number')
-st.write(Y.unique())
 
 st.subheader('Prediction')
 st.write(prediction)
-
-st.subheader('Prediction Probability')
-st.write(prediction_proba)
